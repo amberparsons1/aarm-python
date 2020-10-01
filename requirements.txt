@@ -1,0 +1,3 @@
+# Required packages
+obspy==1.2.2
+matplotlib==3.3.0
