@@ -18,7 +18,7 @@ def main():
     evdirs = [evdir for evdir in glob.glob(f"{CWD}/??????????????") if os.path.isdir(evdir)]
 
     for event in evdirs:
-        print("***",event.split("/")[-1],"***")
+        print(f"*** {event.split('/')[-1]} ***")
 
         # Get stream with event traces prepared for stacking
         event_stream = prepared_event_stream(event)
@@ -49,7 +49,7 @@ def prepared_event_stream(event_path):
         st = read(sac_file)
         # Ensure only 1 trace read from sac_file, skip file otherwise
         if len(st) != 1:
-            print(f"{len(st)} traces in {sac_file}! Expected 1.")
+            print(f"{len(st)} traces in {sac_file.split('/')[-1]}! Expected 1.")
             continue
         prep_trace(st[0])
         stream += st

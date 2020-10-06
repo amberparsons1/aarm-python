@@ -7,7 +7,7 @@ This python tool is only an **initial prototype** with currently limited impleme
 ## Requirements
 * Python 3 (only tested in version 3.7.3 on a macOS system)
 * Dependencies in requirements.txt (install with `pip install -r /path/to/requirements.txt`)
-* SAC data files formatted as detailed in the manual accompanying the bash tool (Section 2)
+* SAC data files formatted as detailed in the 'AARM code user guide' accompanying the bash tool (Section 2)
 
 ## Using the tool
 Navigate inside the directory containing the event directories (e.g EXAMPLE_DATA). Run script calc_arr_times.py.
@@ -15,7 +15,7 @@ Navigate inside the directory containing the event directories (e.g EXAMPLE_DATA
 This will:
 1. Get the event directory paths
 1. For each event:
-   1. Great a prepared event stream ready to stack: each trace is read in, cut around their alignment point t0 to 60 s, and normalized.
+   1. Create a prepared event stream ready to stack: each trace is read in, cut around their alignment point t0 to 60 s, and normalized.
    1. Form 1st stack (nth-root method) and plot.
 
 Implementing creating the 2nd stack and interactive picking to calculate absolute arrival-times is yet to be done.
